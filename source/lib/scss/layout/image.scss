@@ -13,16 +13,16 @@ $bgImages: ( ("#section1", "any"), ("#section2", "tech"), );
   $sizes: (240: 135, 480: 270, 720: 405, 960: 540);
   //$sizes: ("sm": "#{$screen-sm}", "md": "#{$screen-md}", "lg": "#{$screen-lg}", "xl": "#{$screen-xl}");
   #{$elem} {
-    background-image: url(#{$rootImgUrl}/750/405/#{$image}.jpg);
+    background-image: url(#{$rootImgUrl}/750/405/#{$image});
     @each $key,
     $size in $sizes {
       // placeholders
-      $img: "#{$rootImgUrl}/#{$elem}/#{$key}/#{$image}.jpg";
-      $img2x: "#{$rootImgUrl}/#{$elem}/#{$key}/#{$image}.jpg";
+      $img: "#{$rootImgUrl}/#{$key}/#{$size}/#{$image}";
+      $img2x: "#{$rootImgUrl}/#{$key}/#{$size}/#{$image}";
       //$img: "#{$rootImgUrl}/#{$image}_#{$key}.jpg";
       //$img2x: "#{$rootImgUrl}/#{$image}_#{$key}@2x.jpg";
       // screen width
-      @media(min-width: $size) {
+      @media(min-width: $size+px) {
         background-image: url($img);
         // Retina Displays
         @media(min-device-pixel-ratio: 2), (min-resolution: 192dpi) {

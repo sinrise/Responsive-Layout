@@ -719,6 +719,10 @@ nav ul .nav-brand {
   z-index: 1000;
   flex-grow: 0;
   margin-right: auto;
+  min-height: 50px;
+}
+nav ul .nav-brand p {
+  padding: 0 10px;
 }
 nav ul .nav-brand a {
   display: flex;
@@ -884,7 +888,7 @@ nav ul .nav-nav li a:hover {
   position: absolute;
   padding: 10px;
   top: 50px;
-  right: 10px;
+  right: 0;
   background-color: #2b2b2b;
 }
 .mininav .mininav-dropdown ul.open {
@@ -903,96 +907,96 @@ form {
 }
 
 #section1 {
-  background-image: url(https://placeimg.com/750/405/any.jpg);
+  background-image: url(https://placeimg.com/750/405/any);
 }
-@media (min-width: 135) {
+@media (min-width: 135px) {
   #section1 {
-    background-image: url("https://placeimg.com/#section1/240/any.jpg");
+    background-image: url("https://placeimg.com/240/135/any");
   }
 }
-@media (min-width: 135) and (min-device-pixel-ratio: 2), (min-width: 135) and (min-resolution: 192dpi) {
+@media (min-width: 135px) and (min-device-pixel-ratio: 2), (min-width: 135px) and (min-resolution: 192dpi) {
   #section1 {
-    background-image: url("https://placeimg.com/#section1/240/any.jpg");
-  }
-}
-
-@media (min-width: 270) {
-  #section1 {
-    background-image: url("https://placeimg.com/#section1/480/any.jpg");
-  }
-}
-@media (min-width: 270) and (min-device-pixel-ratio: 2), (min-width: 270) and (min-resolution: 192dpi) {
-  #section1 {
-    background-image: url("https://placeimg.com/#section1/480/any.jpg");
+    background-image: url("https://placeimg.com/240/135/any");
   }
 }
 
-@media (min-width: 405) {
+@media (min-width: 270px) {
   #section1 {
-    background-image: url("https://placeimg.com/#section1/720/any.jpg");
+    background-image: url("https://placeimg.com/480/270/any");
   }
 }
-@media (min-width: 405) and (min-device-pixel-ratio: 2), (min-width: 405) and (min-resolution: 192dpi) {
+@media (min-width: 270px) and (min-device-pixel-ratio: 2), (min-width: 270px) and (min-resolution: 192dpi) {
   #section1 {
-    background-image: url("https://placeimg.com/#section1/720/any.jpg");
+    background-image: url("https://placeimg.com/480/270/any");
   }
 }
 
-@media (min-width: 540) {
+@media (min-width: 405px) {
   #section1 {
-    background-image: url("https://placeimg.com/#section1/960/any.jpg");
+    background-image: url("https://placeimg.com/720/405/any");
   }
 }
-@media (min-width: 540) and (min-device-pixel-ratio: 2), (min-width: 540) and (min-resolution: 192dpi) {
+@media (min-width: 405px) and (min-device-pixel-ratio: 2), (min-width: 405px) and (min-resolution: 192dpi) {
   #section1 {
-    background-image: url("https://placeimg.com/#section1/960/any.jpg");
+    background-image: url("https://placeimg.com/720/405/any");
+  }
+}
+
+@media (min-width: 540px) {
+  #section1 {
+    background-image: url("https://placeimg.com/960/540/any");
+  }
+}
+@media (min-width: 540px) and (min-device-pixel-ratio: 2), (min-width: 540px) and (min-resolution: 192dpi) {
+  #section1 {
+    background-image: url("https://placeimg.com/960/540/any");
   }
 }
 
 #section2 {
-  background-image: url(https://placeimg.com/750/405/tech.jpg);
+  background-image: url(https://placeimg.com/750/405/tech);
 }
-@media (min-width: 135) {
+@media (min-width: 135px) {
   #section2 {
-    background-image: url("https://placeimg.com/#section2/240/tech.jpg");
+    background-image: url("https://placeimg.com/240/135/tech");
   }
 }
-@media (min-width: 135) and (min-device-pixel-ratio: 2), (min-width: 135) and (min-resolution: 192dpi) {
+@media (min-width: 135px) and (min-device-pixel-ratio: 2), (min-width: 135px) and (min-resolution: 192dpi) {
   #section2 {
-    background-image: url("https://placeimg.com/#section2/240/tech.jpg");
-  }
-}
-
-@media (min-width: 270) {
-  #section2 {
-    background-image: url("https://placeimg.com/#section2/480/tech.jpg");
-  }
-}
-@media (min-width: 270) and (min-device-pixel-ratio: 2), (min-width: 270) and (min-resolution: 192dpi) {
-  #section2 {
-    background-image: url("https://placeimg.com/#section2/480/tech.jpg");
+    background-image: url("https://placeimg.com/240/135/tech");
   }
 }
 
-@media (min-width: 405) {
+@media (min-width: 270px) {
   #section2 {
-    background-image: url("https://placeimg.com/#section2/720/tech.jpg");
+    background-image: url("https://placeimg.com/480/270/tech");
   }
 }
-@media (min-width: 405) and (min-device-pixel-ratio: 2), (min-width: 405) and (min-resolution: 192dpi) {
+@media (min-width: 270px) and (min-device-pixel-ratio: 2), (min-width: 270px) and (min-resolution: 192dpi) {
   #section2 {
-    background-image: url("https://placeimg.com/#section2/720/tech.jpg");
+    background-image: url("https://placeimg.com/480/270/tech");
   }
 }
 
-@media (min-width: 540) {
+@media (min-width: 405px) {
   #section2 {
-    background-image: url("https://placeimg.com/#section2/960/tech.jpg");
+    background-image: url("https://placeimg.com/720/405/tech");
   }
 }
-@media (min-width: 540) and (min-device-pixel-ratio: 2), (min-width: 540) and (min-resolution: 192dpi) {
+@media (min-width: 405px) and (min-device-pixel-ratio: 2), (min-width: 405px) and (min-resolution: 192dpi) {
   #section2 {
-    background-image: url("https://placeimg.com/#section2/960/tech.jpg");
+    background-image: url("https://placeimg.com/720/405/tech");
+  }
+}
+
+@media (min-width: 540px) {
+  #section2 {
+    background-image: url("https://placeimg.com/960/540/tech");
+  }
+}
+@media (min-width: 540px) and (min-device-pixel-ratio: 2), (min-width: 540px) and (min-resolution: 192dpi) {
+  #section2 {
+    background-image: url("https://placeimg.com/960/540/tech");
   }
 }
 
