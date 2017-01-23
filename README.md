@@ -1,2 +1,7 @@
-# Responsive-Navbar
-Responsive Navbar via CSS3. Dropdowns via jQuery.
+# Responsive-Layout
+
+//to-do
+//documentation
+////navbar
+////responsive images
+////flexbox
