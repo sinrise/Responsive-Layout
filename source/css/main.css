@@ -916,7 +916,7 @@ form {
 }
 @media (min-width: 135px) and (min-device-pixel-ratio: 2), (min-width: 135px) and (min-resolution: 192dpi) {
   #section1 {
-    background-image: url("https://placeimg.com/240/135/any");
+    background-image: url("https://placeimg.com/480/270/any");
   }
 }
 
@@ -927,7 +927,7 @@ form {
 }
 @media (min-width: 270px) and (min-device-pixel-ratio: 2), (min-width: 270px) and (min-resolution: 192dpi) {
   #section1 {
-    background-image: url("https://placeimg.com/480/270/any");
+    background-image: url("https://placeimg.com/960/540/any");
   }
 }
 
@@ -938,7 +938,7 @@ form {
 }
 @media (min-width: 405px) and (min-device-pixel-ratio: 2), (min-width: 405px) and (min-resolution: 192dpi) {
   #section1 {
-    background-image: url("https://placeimg.com/720/405/any");
+    background-image: url("https://placeimg.com/1440/810/any");
   }
 }
 
@@ -949,7 +949,7 @@ form {
 }
 @media (min-width: 540px) and (min-device-pixel-ratio: 2), (min-width: 540px) and (min-resolution: 192dpi) {
   #section1 {
-    background-image: url("https://placeimg.com/960/540/any");
+    background-image: url("https://placeimg.com/1920/1080/any");
   }
 }
 
@@ -963,7 +963,7 @@ form {
 }
 @media (min-width: 135px) and (min-device-pixel-ratio: 2), (min-width: 135px) and (min-resolution: 192dpi) {
   #section2 {
-    background-image: url("https://placeimg.com/240/135/tech");
+    background-image: url("https://placeimg.com/480/270/tech");
   }
 }
 
@@ -974,7 +974,7 @@ form {
 }
 @media (min-width: 270px) and (min-device-pixel-ratio: 2), (min-width: 270px) and (min-resolution: 192dpi) {
   #section2 {
-    background-image: url("https://placeimg.com/480/270/tech");
+    background-image: url("https://placeimg.com/960/540/tech");
   }
 }
 
@@ -985,7 +985,7 @@ form {
 }
 @media (min-width: 405px) and (min-device-pixel-ratio: 2), (min-width: 405px) and (min-resolution: 192dpi) {
   #section2 {
-    background-image: url("https://placeimg.com/720/405/tech");
+    background-image: url("https://placeimg.com/1440/810/tech");
   }
 }
 
@@ -996,7 +996,7 @@ form {
 }
 @media (min-width: 540px) and (min-device-pixel-ratio: 2), (min-width: 540px) and (min-resolution: 192dpi) {
   #section2 {
-    background-image: url("https://placeimg.com/960/540/tech");
+    background-image: url("https://placeimg.com/1920/1080/tech");
   }
 }
 

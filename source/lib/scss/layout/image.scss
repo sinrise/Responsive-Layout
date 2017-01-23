@@ -18,7 +18,9 @@ $bgImages: ( ("#section1", "any"), ("#section2", "tech"), );
     $size in $sizes {
       // placeholders
       $img: "#{$rootImgUrl}/#{$key}/#{$size}/#{$image}";
-      $img2x: "#{$rootImgUrl}/#{$key}/#{$size}/#{$image}";
+      $key2x: $key * 2;
+      $size2x: $size * 2;
+      $img2x: "#{$rootImgUrl}/#{$key2x}/#{$size2x}/#{$image}";
       //$img: "#{$rootImgUrl}/#{$image}_#{$key}.jpg";
       //$img2x: "#{$rootImgUrl}/#{$image}_#{$key}@2x.jpg";
       // screen width
