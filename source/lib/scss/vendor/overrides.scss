@@ -1,0 +1,41 @@
+/*#region qTips */
+  // hide tooltips initially
+  .has_tooltip {
+    display: inline;
+    border-width: 0 0 1px 0;
+    border-style: dotted;
+    border-color: $qtip-target-ul-color;
+    &:hover {
+      cursor: default;
+      color: $qtip-target-hover-color;
+      border-color: $qtip-target-hover-color;
+    }
+    + div { display: none; }
+  }
+
+  // custom styles
+  .qtip-lotus {
+    max-width: none;
+    background-color: $qtip-bg-color;
+    border-color: $qtip-border-color;
+    p {
+      display: block;
+      margin-bottom: 10px;
+      color: $qtip-content-color;
+      &:first-of-type { padding: 5px 0 0; }
+      &:last-of-type {
+        padding: 0 0 5px;
+        margin-bottom: 0;
+      }
+      span {
+        display: inline-block;
+        width: 140px;
+        font-weight: bold;
+      }
+      word-wrap: normal;
+    }
+    .qtip-content {
+      word-wrap: none;
+    }
+  }
+/*#endregion */

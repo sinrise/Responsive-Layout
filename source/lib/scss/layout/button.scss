@@ -1,0 +1,47 @@
+﻿@import "constant";
+
+.btn {
+  border-width: 1px;
+  border-radius: 0px;
+  border-style: solid;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  transition: all 0.2s linear;
+  text-align: center;
+  &:hover { transition: all 0.2s linear; }
+  &:focus { outline: none; }
+}
+
+a.btn { text-decoration: none; }
+
+%btn-default {
+  color: $btn-default-color;
+  border-color: $btn-default-border-color;
+  background-color: $btn-default-bg-color;
+  &:hover {
+    border-color: $btn-default-border-hover-color;
+    background-color: $btn-default-bg-hover-color;
+  }
+}
+
+.btn-pseudo {
+  @extend %btn-default;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-default {
+  @extend %btn-default;
+}
+
+.btn-light-bg {
+  color: $btn-light-bg-color;
+  border-color: $btn-light-bg-border-color;
+  background-color: $btn-light-bg-bg-color;
+  &:hover {
+    color: $btn-light-bg-hover-color;
+    background-color: $btn-light-bg-bg-hover-color;
+  }
+}

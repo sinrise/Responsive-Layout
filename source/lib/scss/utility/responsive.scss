@@ -1,0 +1,18 @@
+﻿@import "constant";
+
+$widths: (
+    $screen-sm: $width-sm,
+    $screen-md: $width-md,
+    $screen-lg: $width-lg,
+    $screen-xl: $width-xl,
+);
+
+@mixin responsive($m) {
+    $mm: "max";
+    @each $screen, $width in $widths {
+        @if $m == "max" { $mm: "max"; } @else { $mm: "min"; }
+        @media(#{$mm}-width: $screen) {
+            width: $width;
+        }
+    }
+}

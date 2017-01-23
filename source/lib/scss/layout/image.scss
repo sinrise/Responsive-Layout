@@ -1,0 +1,34 @@
+﻿@import "constant";
+
+// RESPONSIVE BACKGROUND IMAGES
+
+// placeholders
+$rootImgUrl: "https://placeimg.com";
+//$rootImgUrl: "../../images";
+$bgImages: ( ("#section1", "any"), ("#section2", "tech"), );
+@each $image in $bgImages {
+  $elem: #{nth($image,1)};
+  $image: #{nth($image,2)};
+  // placeholders
+  $sizes: (240: 135, 480: 270, 720: 405, 960: 540);
+  //$sizes: ("sm": "#{$screen-sm}", "md": "#{$screen-md}", "lg": "#{$screen-lg}", "xl": "#{$screen-xl}");
+  #{$elem} {
+    background-image: url(#{$rootImgUrl}/750/405/#{$image}.jpg);
+    @each $key,
+    $size in $sizes {
+      // placeholders
+      $img: "#{$rootImgUrl}/#{$elem}/#{$key}/#{$image}.jpg";
+      $img2x: "#{$rootImgUrl}/#{$elem}/#{$key}/#{$image}.jpg";
+      //$img: "#{$rootImgUrl}/#{$image}_#{$key}.jpg";
+      //$img2x: "#{$rootImgUrl}/#{$image}_#{$key}@2x.jpg";
+      // screen width
+      @media(min-width: $size) {
+        background-image: url($img);
+        // Retina Displays
+        @media(min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          background-image: url($img2x);
+        }
+      }
+    }
+  }
+}

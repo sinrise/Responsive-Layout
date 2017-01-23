@@ -1,0 +1,228 @@
+﻿@import "constant";
+
+@keyframes spinCW { 100% { transform: rotate(360deg); } }
+@keyframes spinCCW { 100% { transform: rotate(-360deg); } }
+
+@keyframes slideDownFromTop {
+    0% { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+}
+
+.animate-slideDownFromTop {
+    animation: slideDownFromTop 0.2s linear;
+    animation-fill-mode: forwards;
+}
+
+.animated {
+    opacity: 0;
+    transform: translateY(50px);
+    &.fade-in-up {
+        opacity: 1 !important;
+        animation-fill-mode: forwards;
+        transform: translateY(0);
+        transition: all 1s cubic-bezier(0, 0, 0, 1.0);
+    }
+}
+
+// @-webkit-keyframes uil-ripple {
+//   0% {
+//     width: 0;
+//     height: 0;
+//     opacity: 0;
+//     margin: 0 0 0 0;
+//   }
+//   33% {
+//     width: 44%;
+//     height: 44%;
+//     margin: -22% 0 0 -22%;
+//     opacity: 1;
+//   }
+//   100% {
+//     width: 88%;
+//     height: 88%;
+//     margin: -44% 0 0 -44%;
+//     opacity: 0;
+//   }
+// }
+// @-webkit-keyframes uil-ripple {
+//   0% {
+//     width: 0;
+//     height: 0;
+//     opacity: 0;
+//     margin: 0 0 0 0;
+//   }
+//   33% {
+//     width: 44%;
+//     height: 44%;
+//     margin: -22% 0 0 -22%;
+//     opacity: 1;
+//   }
+//   100% {
+//     width: 88%;
+//     height: 88%;
+//     margin: -44% 0 0 -44%;
+//     opacity: 0;
+//   }
+// }
+// @-moz-keyframes uil-ripple {
+//   0% {
+//     width: 0;
+//     height: 0;
+//     opacity: 0;
+//     margin: 0 0 0 0;
+//   }
+//   33% {
+//     width: 44%;
+//     height: 44%;
+//     margin: -22% 0 0 -22%;
+//     opacity: 1;
+//   }
+//   100% {
+//     width: 88%;
+//     height: 88%;
+//     margin: -44% 0 0 -44%;
+//     opacity: 0;
+//   }
+// }
+// @-ms-keyframes uil-ripple {
+//   0% {
+//     width: 0;
+//     height: 0;
+//     opacity: 0;
+//     margin: 0 0 0 0;
+//   }
+//   33% {
+//     width: 44%;
+//     height: 44%;
+//     margin: -22% 0 0 -22%;
+//     opacity: 1;
+//   }
+//   100% {
+//     width: 88%;
+//     height: 88%;
+//     margin: -44% 0 0 -44%;
+//     opacity: 0;
+//   }
+// }
+// @-moz-keyframes uil-ripple {
+//   0% {
+//     width: 0;
+//     height: 0;
+//     opacity: 0;
+//     margin: 0 0 0 0;
+//   }
+//   33% {
+//     width: 44%;
+//     height: 44%;
+//     margin: -22% 0 0 -22%;
+//     opacity: 1;
+//   }
+//   100% {
+//     width: 88%;
+//     height: 88%;
+//     margin: -44% 0 0 -44%;
+//     opacity: 0;
+//   }
+// }
+// @-webkit-keyframes uil-ripple {
+//   0% {
+//     width: 0;
+//     height: 0;
+//     opacity: 0;
+//     margin: 0 0 0 0;
+//   }
+//   33% {
+//     width: 44%;
+//     height: 44%;
+//     margin: -22% 0 0 -22%;
+//     opacity: 1;
+//   }
+//   100% {
+//     width: 88%;
+//     height: 88%;
+//     margin: -44% 0 0 -44%;
+//     opacity: 0;
+//   }
+// }
+// @-o-keyframes uil-ripple {
+//   0% {
+//     width: 0;
+//     height: 0;
+//     opacity: 0;
+//     margin: 0 0 0 0;
+//   }
+//   33% {
+//     width: 44%;
+//     height: 44%;
+//     margin: -22% 0 0 -22%;
+//     opacity: 1;
+//   }
+//   100% {
+//     width: 88%;
+//     height: 88%;
+//     margin: -44% 0 0 -44%;
+//     opacity: 0;
+//   }
+// }
+@keyframes uil-ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  33% {
+    width: 44%;
+    height: 44%;
+    margin: -22% 0 0 -22%;
+    opacity: 1;
+  }
+  100% {
+    width: 88%;
+    height: 88%;
+    margin: -44% 0 0 -44%;
+    opacity: 0;
+  }
+}
+
+#thinker-cont {
+  height: 32px;
+  width: 32px;
+  #thinker {
+    //position: absolute;
+    //display: none;
+  }  
+}
+
+.uil-ripple {
+  background: none;
+  position: relative;
+  .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    border-radius: 50%;
+    border-width: 10px;
+    border-style: solid;
+    -ms-animation: uil-ripple 2s ease-out infinite;
+    -moz-animation: uil-ripple 2s ease-out infinite;
+    -webkit-animation: uil-ripple 2s ease-out infinite;
+    -o-animation: uil-ripple 2s ease-out infinite;
+    animation: uil-ripple 2s ease-out infinite;
+    &:nth-of-type(1) {
+      border-color: #cccccc;
+    }
+    &:nth-of-type(2) {
+      border-color: #cccccc;
+      -ms-animation-delay: 1s;
+      -moz-animation-delay: 1s;
+      -webkit-animation-delay: 1s;
+      -o-animation-delay: 1s;
+      animation-delay: 1s;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import "constant";
+
+a {
+  .anchor1 {
+    fill: rgba(255, 255, 255, 0.5);
+  }
+  &:hover {
+    .anchor1 {
+      fill: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.anchor1 {
+  fill: rgba($white, 0.5);
+}
+
+.client_brand {
+  fill: $logo-fill-color;
+}
+
+#nav-collapse-icon {
+  g {
+    stroke: $nav-collapse-btn-color;
+    fill: $nav-collapse-btn-color;
+    transition: all 0.1s linear;
+  }
+  &:hover {
+    g {
+      &#top {
+        transform: translateY(-20px);
+      }
+      &#bot {
+        transform: translateY(20px);
+      }
+      transition: all 0.1s linear;
+    }
+  }
+  &.open {
+    g {
+      &#top {
+        transform: rotateZ(45deg);
+      }
+      &#mid {
+        opacity: 0;
+      }
+      &#bot {
+        transform: rotateZ(-45deg);
+      }
+    }
+  }
+}
+
+header.header-fixed {
+  #logo {}
+}

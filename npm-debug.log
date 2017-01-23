@@ -1,0 +1,79 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '--save-dev' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 warn package.json Ivan_Source@1.0.0 No repository field.
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ 'E:\\Dropbox\\source\\Responsive-Navbar',
+7 verbose install   [ 'grunt',
+7 verbose install     'grunt-contrib-watch',
+7 verbose install     'grunt-contrib-sass',
+7 verbose install     'grunt-contrib-uglify',
+7 verbose install     'grunt-contrib-cssmin',
+7 verbose install     'grunt-postcss',
+7 verbose install     'autoprefixer',
+7 verbose install     'postcss-flexboxfixer',
+7 verbose install     'pixrem' ] ]
+8 info preinstall Ivan_Source@1.0.0
+9 verbose readDependencies using package.json deps
+10 verbose already installed skipping grunt@^1.0.1 E:\Dropbox\source\Responsive-Navbar
+11 verbose already installed skipping grunt-contrib-watch@^1.0.0 E:\Dropbox\source\Responsive-Navbar
+12 verbose already installed skipping grunt-contrib-sass@^0.4 E:\Dropbox\source\Responsive-Navbar
+13 verbose already installed skipping grunt-contrib-uglify@^2.0.0 E:\Dropbox\source\Responsive-Navbar
+14 verbose already installed skipping grunt-contrib-cssmin@^1.0.2 E:\Dropbox\source\Responsive-Navbar
+15 verbose already installed skipping grunt-postcss@^0.8.0 E:\Dropbox\source\Responsive-Navbar
+16 verbose already installed skipping autoprefixer@^6.5.1 E:\Dropbox\source\Responsive-Navbar
+17 verbose already installed skipping postcss-flexboxfixer@^0.0.5 E:\Dropbox\source\Responsive-Navbar
+18 verbose already installed skipping pixrem@^3.0.2 E:\Dropbox\source\Responsive-Navbar
+19 silly resolved []
+20 info build E:\Dropbox\source\Responsive-Navbar
+21 verbose linkStuff [ false, false, false, 'E:\\Dropbox\\source' ]
+22 info linkStuff Ivan_Source@1.0.0
+23 verbose linkBins Ivan_Source@1.0.0
+24 verbose linkMans Ivan_Source@1.0.0
+25 verbose rebuildBundles Ivan_Source@1.0.0
+26 verbose rebuildBundles [ '.bin',
+26 verbose rebuildBundles   'autoprefixer',
+26 verbose rebuildBundles   'grunt',
+26 verbose rebuildBundles   'grunt-cli',
+26 verbose rebuildBundles   'grunt-contrib-cssmin',
+26 verbose rebuildBundles   'grunt-contrib-sass',
+26 verbose rebuildBundles   'grunt-contrib-uglify',
+26 verbose rebuildBundles   'grunt-contrib-watch',
+26 verbose rebuildBundles   'grunt-postcss',
+26 verbose rebuildBundles   'pixrem',
+26 verbose rebuildBundles   'postcss-flexboxfixer' ]
+27 verbose rebuild bundle E:\Dropbox\source\Responsive-Navbar\node_modules\grunt-cli
+28 info build E:\Dropbox\source\Responsive-Navbar\node_modules\grunt-cli
+29 info preinstall grunt-cli@1.2.0
+30 verbose linkStuff [ false,
+30 verbose linkStuff   false,
+30 verbose linkStuff   false,
+30 verbose linkStuff   'E:\\Dropbox\\source\\Responsive-Navbar\\node_modules' ]
+31 info linkStuff grunt-cli@1.2.0
+32 verbose linkBins grunt-cli@1.2.0
+33 verbose link bins [ { grunt: 'bin/grunt' },
+33 verbose link bins   'E:\\Dropbox\\source\\Responsive-Navbar\\node_modules\\.bin',
+33 verbose link bins   false ]
+34 verbose linkMans grunt-cli@1.2.0
+35 verbose rebuildBundles grunt-cli@1.2.0
+36 verbose rebuildBundles [ '.bin', 'findup-sync', 'grunt-known-options', 'nopt', 'resolve' ]
+37 info install grunt-cli@1.2.0
+38 info postinstall grunt-cli@1.2.0
+39 info install Ivan_Source@1.0.0
+40 info postinstall Ivan_Source@1.0.0
+41 info prepublish Ivan_Source@1.0.0
+42 error peerinvalid The package grunt does not satisfy its siblings' peerDependencies requirements!
+42 error peerinvalid Peer grunt-contrib-sass@0.4.1 wants grunt@~0.4.0
+42 error peerinvalid Peer grunt-postcss@0.8.0 wants grunt@>=0.4.5
+43 error System Windows_NT 6.2.9200
+44 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "--save-dev"
+45 error cwd E:\Dropbox\source\Responsive-Navbar
+46 error node -v v0.10.32
+47 error npm -v 1.4.28
+48 error code EPEERINVALID
+49 verbose exit [ 1, true ]

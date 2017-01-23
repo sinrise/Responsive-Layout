@@ -1,0 +1,137 @@
+﻿@import "constant"; 
+
+.slide { background-position: center center; }
+
+$rootImgUrl: "../../images/";
+
+$slides: (
+    ("home", ".home-s1", "hp_slideA"),
+    ("home", ".home-s2", "hp_slideB"),
+    ("home", ".home-s3", "hp_slideC"),
+    ("tcmobile", ".tcmobile-s2", "tcSlideB"),
+    ("tcmobile", ".tcmobile-s4", "tcSlideD"),
+    ("tmi", ".tmi-analytics", "tmi_heatmap"),
+    ("tmi", ".tmi-process", "tmi_desk"),
+    ("unity", ".unity-heatmap", "un_heatmap"),
+    ("unity", ".unity-office", "un_office"),
+    ("trafficmanager", ".tcrequest", "tm_slide1"),
+    ("about", ".about", "562_teamDinner")
+);
+
+@each $slide in $slides {
+    $area: #{nth($slide,1)};
+    $elem: #{nth($slide,2)};
+    $image: #{nth($slide,3)};
+
+    $sizes: ("xs": "#{$screen-xs}", "sm": "#{$screen-sm}", "md": "#{$screen-md}", "lg": "#{$screen-lg}", "xl": "#{$screen-xl}");
+
+    #{$elem} {
+        background-image: url(#{$rootImgUrl}#{$area}/#{$image}-md.jpg);
+        @each $key, $size in $sizes {
+            // screen width
+            @media(min-width: $size) {
+                background-image: url(#{$rootImgUrl}#{$area}/#{$image}-#{$key}.jpg);
+                // Retina Displays
+                @media(min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+                    background-image: url(#{$rootImgUrl}#{$area}/#{$image}-#{$key}@2x.jpg)
+                }
+            }
+        }
+    }
+}
+
+.carousel {
+    .slide {
+        height: 800px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        //background-color: $carousel-slide-bg-color;
+        //color: $carousel-title-color;
+        z-index: 900;
+        h1 {
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-weight: $font-light;
+            margin-bottom: 35px;
+            a {
+                //color: $carousel-slide-link-color;
+                //border-bottom: 1px solid $carousel-slide-link-line-color;
+                &:hover {
+                    //border-bottom-color: $carousel-slide-link-line-hover-color;
+                    text-decoration: none;
+                }
+            }
+        }
+        img {
+            height: auto;
+            max-width: 500px;
+            max-height: 400px;
+            @media(max-width: $screen-xl) { max-width: 350px; }
+            @media(max-width: $screen-sm) { max-width: 300px; }
+            @media(max-width: $screen-xs) { max-width: 250px; }
+        }
+        .btn {
+            margin-bottom: 30px;
+        }
+        .slide-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            width: 1170px; height: 100%;
+            text-align: center;
+            h2 { width: 730px; }
+        }
+    }
+    &.slide-animate {
+        //.slide-content h2, .slide-content p { opacity: 0; }
+    }
+}
+
+.cols-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .col1 {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        width: 30%;
+        a, h1 { align-self: flex-start; }
+        h1, h2 { width: 100%; }
+    }
+    .col2 {
+        align-items: flex-start;
+        flex-direction: column;
+        width: 30%;
+        padding-left: 30px;
+    }
+    @media(max-width: $screen-lg) {
+        flex-direction: column;
+        img { padding-top: 40px; }
+        .col1 {
+            width: 70%;
+            align-items: flex-start;
+        }
+        .col2 {
+            width: 70%;
+            align-items: flex-start;
+            padding: 0;
+        }
+        &.reverse {
+            .col1 {
+                order: 2;
+            }
+            .col2 {
+                order: 1;
+                justify-content: flex-start;
+            }
+        }
+    }
+}

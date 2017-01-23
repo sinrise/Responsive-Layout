@@ -1,0 +1,93 @@
+﻿@import "constant";
+
+/*#region FONT */
+
+html {
+  // anti FOUT
+  &.wf-loading {
+    p,
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    .btn-default,
+    .nav-brand span {
+      visibility: hidden;
+    }
+  }
+  &.wf-active {
+    p,
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    .btn-default,
+    .nav-brand span {
+      visibility: visible;
+    }
+  }
+  &.wf-inactive {
+    font-family: sans-serif;
+  }
+}
+
+
+/*#endregion */
+
+
+/*#region SIZE */
+
+html {
+  font-size: 20px;
+  @media(max-width: $screen-lg) {
+    font-size: 16px;
+  }
+}
+
+// 50px/40px
+h1 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+// 30px/24px
+section article .copy h2,
+.list.tile-list.text>*>p {
+  font-size: 1.5rem;
+}
+
+// 24px/19.2px
+h2 {
+  font-size: 1.2rem;
+}
+
+// 20px/16px
+.byline, a {
+  font-size: 1.0rem;
+}
+
+// 18px/14.4px
+.btn,
+blockquote p,
+article .copy h3 {
+  font-size: 0.9rem;
+}
+
+// 16px/12.8px
+p,
+.nav-nav li a,
+blockquote p span,
+article ul li,
+input,
+td,
+th
+{ font-size: 0.8rem; }
+
+.pulledquote p::before,
+.pulledquote p::after
+{ font-size: 2.0rem; }
+/*#endregion */

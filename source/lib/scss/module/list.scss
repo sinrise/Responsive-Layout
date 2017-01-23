@@ -1,0 +1,276 @@
+@import "constant";
+
+.list {
+  z-index: 700;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: center;
+  // setting the bottom margin of the container to the negative value of its children will allow
+  // the bottom margin of each child to collapse into the padding of the container.
+  // This allows for collapsing/wrapping grids to maintain a constant
+  // distance from the bottom regardless of the number of items
+  // that get wrapped to the bottom row.
+  margin: 0 auto -20px;
+  > * {
+    margin: 0 auto 20px;
+  }
+  @include responsive("min");
+}
+
+.tile-list {
+  > * {
+    display: inline-block;
+    width: 250px;
+    img { width: 100%; }
+  }
+  a {
+    text-decoration: none;
+    h2 { }
+    .img {
+      display: block;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba($black, 0.3);
+        transition: all 0.2s linear;
+      }      
+    }
+    &:hover {
+      text-decoration: none;
+      .img {
+        &::before {
+          opacity: 0;
+          transition: all 0.2s linear;
+        }        
+      }
+    }   
+  }
+  &.text {
+    > * {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      height: 250px;
+      text-align: center;
+      background-color: $list-text-bg-color;
+      color: $list-color;
+    }
+  }
+}
+
+.circle-list {
+  // set the bottom margin of the entire list to the negative value of the items' bottom margin to simulate margin/padding collapse, eliminating extra space at the bottom.
+  margin-bottom: -30px;
+  a {
+    text-align: center;
+    display: inline-block;
+    width: 260px;
+    position: relative;
+    margin-bottom: 30px;
+    &:before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      width: 100%;
+      height: 260px;
+      //background-color: $circle-list-bg-hover-color;
+      opacity: 0;
+      transition: opacity 0.2s linear;
+    }
+    &:after {
+      //font-family: "fst-icons";
+      font-size: 40px;
+      content: "\e079";
+      position: absolute;
+      top: 110px;
+      left: 110px;
+      opacity: 0;
+      //color: $circle-list-hover-color;
+      transition: opacity 0.2s linear;
+    }
+    &:hover {
+      text-decoration: none;
+      &:before {
+        opacity: 0.8;
+        transition: opacity 0.2s linear;
+      }
+      &:after {
+        opacity: 1;
+        transition: opacity 0.2s linear;
+      }
+    }
+    img {
+      width: 100%;
+      border-radius: 50%;
+      border: 0;
+    }
+    h2 {
+      white-space: nowrap;
+      font-weight: $font-regular;
+      //color: $circle-list-head-color;
+      margin: 0 0 15px 0;
+    }
+    p {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      //color: $circle-list-category-color;
+    }
+  }
+}
+
+.icontile-list {
+  margin-bottom: -60px;
+  .item {
+    position: relative;
+    //background-color: $icontile-item-bg-color;
+    padding: 30px;
+    width: 270px;
+    margin: 0 auto 60px;
+    text-align: center;
+    &:before {
+      position: absolute;
+      margin-left: -40px;
+      top: -40px;
+      left: 50%;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      font-size: 40px;
+      line-height: 80px;
+      //color: $icontile-icon-color
+    }
+    &:nth-child(odd) {
+      //&:before { background-color: $icontile-tile-even-bg-color; }
+    }
+    &:nth-child(even) {
+      //&:before { background-color: $icontile-tile-odd-bg-color; }
+    }
+    h2 {
+      margin: 30px 0 10px;
+      //color: $icontile-head-color;
+      font-weight: $font-regular;
+    }
+    p {
+      //color: $icontile-desc-color;
+      line-height: 1.8;
+    }
+  }
+}
+
+.quote-list {
+  margin-top: 20px;
+  margin-bottom: -60px;
+  blockquote {
+    position: relative;
+    padding: 30px;
+    width: 270px;
+    margin: 0 auto 120px;
+    //background-color: $icontile-item-bg-color;
+    border-radius: 4px;
+    align-self: flex-start;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 40px;
+      //border-top: 15px solid $quote-list-arrow-color;
+      //border-top-color: $quote-list-arrow-color;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+    }
+    .portrait {
+      position: absolute;
+      top: -30px;
+      left: 10px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      //color: $quote-list-portait-color;
+      //background-color: $quote-list-portait-bg-color;
+      &:before {
+        position: absolute;
+        font-size: 30px;
+        top: 50%;
+        left: 50%;
+        margin: -15px 0 0 -15px;
+      }
+    }
+    p {
+      line-height: 1.8;
+      font-style: italic;
+      font-weight: $font-regular;
+      //color: $quote-list-quote-color;
+      &.byline {
+        position: absolute;
+        bottom: -60px;
+        left: 20px;
+        //color: $quote-list-byline-color;
+        font-weight: $font-regular;
+        font-style: normal;
+        line-height: 1;
+        span {
+          font-weight: $font-regular;
+          //color: $quote-list-byline-pos-color;
+        }
+      }
+    }
+  }
+}
+
+.icontile-left-list {
+  // flexbox this -abs icon makes the bounding box look weird/misaligned.
+  margin-bottom: -65px;
+  .item {
+    position: relative;
+    padding: 0 0 0 65px;
+    margin: 0 auto 60px;
+    width: 270px;
+    text-align: left;
+    &:before {
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      font-size: 40px;
+      line-height: 80px;
+      //color: $icontile-left-icon-color
+    }
+    h2 {
+      margin: 0 0 10px;
+      //color: $icontile-head-color;
+      font-weight: $font-regular;
+    }
+    p {
+      //color: $icontile-desc-color;
+      line-height: 1.8;
+    }
+  }
+}
+
+.text-list {
+  // flexbox this -abs icon makes the bounding box look weird/misaligned.
+  margin-bottom: -60px;
+  .item {
+    position: relative;
+    padding: 0 20px;
+    margin: 0 auto 60px;
+    width: 270px;
+    text-align: center;
+    h2 {
+      margin: 0 0 10px;
+      //color: $icontile-head-color;
+      font-weight: $font-regular;
+    }
+    p {
+      //color: $icontile-desc-color;
+      line-height: 1.8;
+    }
+  }
+}

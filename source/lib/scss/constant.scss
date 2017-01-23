@@ -1,0 +1,89 @@
+@import "color";
+// hf = header fixed
+$header-bg-color: $custom-gray-dk;
+$main-bg-color:   $custom-gray-dk;
+$footer-bg-color: $custom-gray-dk;
+$footer-color:    $white;
+
+$header-fixed-bg-color: $white;
+//*#region Nav */
+  $nav-color:                 $custom-gray-lt;
+  $nav-bg-color:              $custom-gray-dk;
+  $nav-hover-color:           $white;
+  $nav-nav-color:             $light;
+  $nav-nav-hover-color:       $white;
+  $nav-nav-hf-color:          rgba($black, 0.5);
+  $nav-nav-hf-hover-color:    $black;
+  $nav-nav-uline-color:       $white;
+  $nav-collapse-btn-color:    $white;
+  $nav-collapse-btn-fh-color: $custom-gray-dk;
+  $nav-brand-color:           $white;
+  $nav-brand-hf-color:        $black;
+//*#endregion*/
+//*#region Buttons */
+  $btn-default-color:               $white;
+  $btn-default-border-color:        rgba($white, 0.2);
+  $btn-default-border-hover-color:  rgba($white, 0.3);
+  $btn-default-bg-color:            rgba($white, 0.1);
+  $btn-default-bg-hover-color:      rgba($white, 0.2);
+  $btn-light-bg-color:              $white;
+  $btn-light-bg-hover-color:        $custom-gray-dk;
+  $btn-light-bg-border-color:       $custom-gray-dk;
+  $btn-light-bg-bg-color:           $custom-gray-dk;
+  $btn-light-bg-bg-hover-color:     $white;
+//*#endregion*/
+//*#region Brand */
+  $logo-fill-color:       $white;
+  $logo-wmark-color:      $black;
+//*#endregion //
+//*#region Section */
+  $section-color:               $white;
+  $section-bg-color:            $custom-gray;
+  $section-bg-color-dk:         $custom-gray-dk;
+  $section-head-color:          $coal;
+  $section-lt-bg-color:         $smoke;
+  $section-md-bg-color:         $smoke;
+  $section-md-subhead-color:    $metal;
+  $section-dk-bg-color:         $custom-gray-lt;
+  $section-dk-head-color:       $white;
+  $section-head-line-color:     $custom-gray-dk;
+  $section-dk-head-line-color:  rgba($white, 0.2);
+  $article-copy-head-color:     $black;
+  $article-copy-color:          $hull;
+//*#endregion */
+//*#region Vendor */
+  $qtip-target-ul-color:    $gray-md;
+  $qtip-target-hover-color: $white;
+  $qtip-bg-color:           $custom-gray-dk;
+  $qtip-border-color:       $custom-gray-lt;
+  $qtip-content-color:      $bright;
+//*#endregion*/
+//*#region Module/List */
+  $list-text-bg-color:  $custom-gray-dk;
+  $list-color:          $white;
+//*#endregion //
+//*#region Module/Quote */
+  $pq-bg-color: $custom-gray-dk;
+//*#endregion //
+//*#region SCREEN WIDTH/MEDIA QUERY */
+  $screen-sm: 425px;
+  $screen-md: 740px;
+  $screen-lg: 960px;
+  $screen-xl: 1440px;
+  $width-sm: 280px;
+  $width-md: 400px;
+  $width-lg: 740px;
+  $width-xl: 960px;
+  %media-query-section-widths {
+    @media(min-width: $screen-sm) { width: $width-sm; }
+    @media(min-width: $screen-md) { width: $width-md; }
+    @media(min-width: $screen-lg) { width: $width-lg; }
+    @media(min-width: $screen-xl) { width: $width-xl; }
+  }
+//*#endregion */
+//*#region FONT WEIGHT & STYLE */
+  // Adobe Typekit .tk-source-sans-pro: includes light, light-italic, regular, regular-italic, bold, bold-italic
+  $font-light: 300;
+  $font-regular: 400;
+  $font-bold: 700;
+//*#endregion */
